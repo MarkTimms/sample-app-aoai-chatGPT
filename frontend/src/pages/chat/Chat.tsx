@@ -678,7 +678,7 @@ const Chat = () => {
   }, [showLoadingMessage, processMessages])
 
   const onShowCitation = (citation: Citation) => {
-    console.log('citation: ' + JSON.stringify(citation))
+    console.log('showing citation: ', citation)
     setActiveCitation(citation)
     setIsCitationPanelOpen(true)
   }
@@ -688,7 +688,9 @@ const Chat = () => {
   }
 
   const onViewSource = (citation: Citation) => {
+    console.log('viewing source: ', citation)
     if (citation.url && !citation.url.includes('blob.core')) {
+        console.log('opening citation url: ', citation.url)
       window.open(citation.url, '_blank')
     }
   }
