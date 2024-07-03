@@ -689,7 +689,7 @@ const Chat = () => {
 
   const onViewSource = (citation: Citation) => {
     console.log('viewing source: ', citation)
-    if (citation.url && !citation.url.includes('blob.core')) {
+    if (citation.url) {
         console.log('opening citation url: ', citation.url)
       window.open(citation.url, '_blank')
     }
@@ -944,7 +944,7 @@ const Chat = () => {
                 className={styles.citationPanelTitle}
                 tabIndex={0}
                 title={
-                  activeCitation.url && !activeCitation.url.includes('blob.core')
+                  activeCitation.url
                     ? activeCitation.url
                     : activeCitation.title ?? ''
                 }
