@@ -678,7 +678,7 @@ const Chat = () => {
   }, [showLoadingMessage, processMessages])
 
   const onShowCitation = (citation: Citation) => {
-    console.log("citation", citation)
+    console.log('citation: ' + JSON.stringify(citation))
     setActiveCitation(citation)
     setIsCitationPanelOpen(true)
   }
@@ -930,7 +930,7 @@ const Chat = () => {
                 horizontalAlign="space-between"
                 verticalAlign="center">
                 <span aria-label="Citations" className={styles.citationPanelHeader}>
-                  Citations
+                  Citation:
                 </span>
                 <IconButton
                   iconProps={{ iconName: 'Cancel' }}
