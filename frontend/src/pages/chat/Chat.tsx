@@ -678,6 +678,7 @@ const Chat = () => {
   }, [showLoadingMessage, processMessages])
 
   const onShowCitation = (citation: Citation) => {
+    console.log("citation", citation)
     setActiveCitation(citation)
     setIsCitationPanelOpen(true)
   }
